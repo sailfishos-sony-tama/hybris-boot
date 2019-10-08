@@ -157,6 +157,89 @@ case "$DEVICE" in
             "$@"
         ;;
 
+    "akari")
+        sed -i \
+            -e 's block/bootdevice/by-name/LTALabel /dev/block/sda2 ' \
+            -e 's block/bootdevice/by-name/Qnovo /dev/block/sda70 ' \
+            -e 's block/bootdevice/by-name/TA /dev/block/sda1 ' \
+            -e 's block/bootdevice/by-name/abl_a /dev/block/sda12 ' \
+            -e 's block/bootdevice/by-name/abl_b /dev/block/sda24 ' \
+            -e 's block/bootdevice/by-name/aop_a /dev/block/sda9 ' \
+            -e 's block/bootdevice/by-name/aop_b /dev/block/sda21 ' \
+            -e 's block/bootdevice/by-name/apdp /dev/block/sda54 ' \
+            -e 's block/bootdevice/by-name/appslog /dev/block/sda68 ' \
+            -e 's block/bootdevice/by-name/bluetooth_a /dev/block/sda34 ' \
+            -e 's block/bootdevice/by-name/bluetooth_b /dev/block/sda44 ' \
+            -e 's block/bootdevice/by-name/boot_a /dev/block/sda36 ' \
+            -e 's block/bootdevice/by-name/boot_b /dev/block/sda46 ' \
+            -e 's block/bootdevice/by-name/cdt /dev/block/sda64 ' \
+            -e 's block/bootdevice/by-name/cmnlib64_a /dev/block/sda15 ' \
+            -e 's block/bootdevice/by-name/cmnlib64_b /dev/block/sda27 ' \
+            -e 's block/bootdevice/by-name/cmnlib_a /dev/block/sda14 ' \
+            -e 's block/bootdevice/by-name/cmnlib_b /dev/block/sda26 ' \
+            -e 's block/bootdevice/by-name/ddr /dev/block/sda8 ' \
+            -e 's block/bootdevice/by-name/devcfg_a /dev/block/sda16 ' \
+            -e 's block/bootdevice/by-name/devcfg_b /dev/block/sda28 ' \
+            -e 's block/bootdevice/by-name/devinfo /dev/block/sda7 ' \
+            -e 's block/bootdevice/by-name/diag /dev/block/sda69 ' \
+            -e 's block/bootdevice/by-name/dsp_a /dev/block/sda35 ' \
+            -e 's block/bootdevice/by-name/dsp_b /dev/block/sda45 ' \
+            -e 's block/bootdevice/by-name/dtbo_a /dev/block/sda39 ' \
+            -e 's block/bootdevice/by-name/dtbo_b /dev/block/sda49 ' \
+            -e 's block/bootdevice/by-name/frp /dev/block/sda67 ' \
+            -e 's block/bootdevice/by-name/fsc /dev/block/sda72 ' \
+            -e 's block/bootdevice/by-name/fsg /dev/block/sda63 ' \
+            -e 's block/bootdevice/by-name/fsmetadata /dev/block/sda71 ' \
+            -e 's block/bootdevice/by-name/hyp_a /dev/block/sda11 ' \
+            -e 's block/bootdevice/by-name/hyp_b /dev/block/sda23 ' \
+            -e 's block/bootdevice/by-name/keymaster_a /dev/block/sda13 ' \
+            -e 's block/bootdevice/by-name/keymaster_b /dev/block/sda25 ' \
+            -e 's block/bootdevice/by-name/keystore /dev/block/sda66 ' \
+            -e 's block/bootdevice/by-name/limits /dev/block/sda57 ' \
+            -e 's block/bootdevice/by-name/logdump /dev/block/sda60 ' \
+            -e 's block/bootdevice/by-name/logfs /dev/block/sda59 ' \
+            -e 's block/bootdevice/by-name/misc /dev/block/sda65 ' \
+            -e 's block/bootdevice/by-name/modem_a /dev/block/sda33 ' \
+            -e 's block/bootdevice/by-name/modem_b /dev/block/sda43 ' \
+            -e 's block/bootdevice/by-name/modemst1 /dev/block/sda61 ' \
+            -e 's block/bootdevice/by-name/modemst2 /dev/block/sda62 ' \
+            -e 's block/bootdevice/by-name/msadp /dev/block/sda55 ' \
+            -e 's block/bootdevice/by-name/oem_a /dev/block/sda40 ' \
+            -e 's block/bootdevice/by-name/oem_b /dev/block/sda50 ' \
+            -e 's block/bootdevice/by-name/persist /dev/block/sda5 ' \
+            -e 's block/bootdevice/by-name/qupfw_a /dev/block/sda17 ' \
+            -e 's block/bootdevice/by-name/qupfw_b /dev/block/sda29 ' \
+            -e 's block/bootdevice/by-name/rddata /dev/block/sda74 ' \
+            -e 's block/bootdevice/by-name/rdimage_a /dev/block/sda37 ' \
+            -e 's block/bootdevice/by-name/rdimage_b /dev/block/sda47 ' \
+            -e 's block/bootdevice/by-name/sec /dev/block/sda53 ' \
+            -e 's block/bootdevice/by-name/spunvm /dev/block/sda56 ' \
+            -e 's block/bootdevice/by-name/ssd /dev/block/sda6 ' \
+            -e 's block/bootdevice/by-name/system_a /dev/block/sda42 ' \
+            -e 's block/bootdevice/by-name/system_b /dev/block/sda52 ' \
+            -e 's block/bootdevice/by-name/toolsfv /dev/block/sda58 ' \
+            -e 's block/bootdevice/by-name/tz_a /dev/block/sda10 ' \
+            -e 's block/bootdevice/by-name/tz_b /dev/block/sda22 ' \
+            -e 's block/bootdevice/by-name/tzxfl_a /dev/block/sda20 ' \
+            -e 's block/bootdevice/by-name/tzxfl_b /dev/block/sda32 ' \
+            -e 's block/bootdevice/by-name/tzxflattest_a /dev/block/sda19 ' \
+            -e 's block/bootdevice/by-name/tzxflattest_b /dev/block/sda31 ' \
+            -e 's block/bootdevice/by-name/userdata /dev/block/sda73 ' \
+            -e 's block/bootdevice/by-name/vbmeta_a /dev/block/sda38 ' \
+            -e 's block/bootdevice/by-name/vbmeta_b /dev/block/sda48 ' \
+            -e 's block/bootdevice/by-name/vendor_a /dev/block/sda41 ' \
+            -e 's block/bootdevice/by-name/vendor_b /dev/block/sda51 ' \
+            -e 's block/bootdevice/by-name/xbl_a /dev/block/sdb1 ' \
+            -e 's block/bootdevice/by-name/xbl_b /dev/block/sdc1 ' \
+            -e 's block/bootdevice/by-name/xbl_config_a /dev/block/sdb2 ' \
+            -e 's block/bootdevice/by-name/xbl_config_b /dev/block/sdc2 ' \
+            -e 's block/bootdevice/by-name/xfl_a /dev/block/sda18 ' \
+            -e 's block/bootdevice/by-name/xfl_b /dev/block/sda30 ' \
+            -e 's block/bootdevice/by-name/xflkeystore /dev/block/sda3 ' \
+            -e 's block/bootdevice/by-name/xflkeystorebak /dev/block/sda4 ' \
+            "$@"
+        ;;
+
     "ghost")
         sed -i \
             -e 's block/platform/msm_sdcc.1/by-name/modem mmcblk0p1 ' \
