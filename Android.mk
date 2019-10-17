@@ -219,6 +219,10 @@ UPDATER_SCRIPT_SRC := $(LOCAL_PATH)/updater-script
 ANDROID_VERSION_MAJOR := $(word 1, $(subst ., , $(PLATFORM_VERSION)))
 ANDROID_VERSION_MINOR := $(word 2, $(subst ., , $(PLATFORM_VERSION)))
 
+ifeq ($(ANDROID_VERSION_MINOR),)
+    ANDROID_VERSION_MINOR := 0
+endif
+
 ifeq ($(TARGET_OTA_ASSERT_DEVICE),)
     ASSERT_DEVICE := assert(getprop("ro.product.device") == "$(TARGET_DEVICE)" \|\| getprop("ro.build.product") == "$(TARGET_DEVICE)" \|\| getprop("ro.cm.device") == "$(TARGET_DEVICE)");
 else
@@ -276,7 +280,7 @@ else
 $(warning Skipping build of hybris-updater-script since HYBRIS_BOOT_PART is not specified)
 endif
 
-HYBRIS_COMMON_ANDROID8_TARGETS := verity_signer boot_signer e2fsdroid vendorimage ramdisk libselinux_stubs libsurfaceflinger libhwc2_compat_layer bootctl
+HYBRIS_COMMON_ANDROID8_TARGETS := verity_signer boot_signer e2fsdroid vendorimage ramdisk libselinux_stubs libsurfaceflinger libhwc2_compat_layer bootctl fec
 
 ifeq ($(shell test $(ANDROID_VERSION_MAJOR) -ge 8 && echo true),true)
 HYBRIS_COMMON_TARGETS += $(HYBRIS_COMMON_ANDROID8_TARGETS)
