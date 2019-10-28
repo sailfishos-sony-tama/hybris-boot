@@ -169,6 +169,7 @@ case "$DEVICE" in
             -e 's block/bootdevice/by-name/apdp sda54 ' \
             -e 's block/bootdevice/by-name/appslog sda68 ' \
             -e 's block/bootdevice/by-name/bluetooth_a sda34 ' \
+            -e 's block/bootdevice/by-name/bluetooth sda34 ' \
             -e 's block/bootdevice/by-name/bluetooth_b sda44 ' \
             -e 's block/bootdevice/by-name/boot_a sda36 ' \
             -e 's block/bootdevice/by-name/boot_b sda46 ' \
@@ -183,6 +184,7 @@ case "$DEVICE" in
             -e 's block/bootdevice/by-name/devinfo sda7 ' \
             -e 's block/bootdevice/by-name/diag sda69 ' \
             -e 's block/bootdevice/by-name/dsp_a sda35 ' \
+            -e 's block/bootdevice/by-name/dsp sda35 ' \
             -e 's block/bootdevice/by-name/dsp_b sda45 ' \
             -e 's block/bootdevice/by-name/dtbo_a sda39 ' \
             -e 's block/bootdevice/by-name/dtbo_b sda49 ' \
@@ -200,11 +202,13 @@ case "$DEVICE" in
             -e 's block/bootdevice/by-name/logfs sda59 ' \
             -e 's block/bootdevice/by-name/misc sda65 ' \
             -e 's block/bootdevice/by-name/modem_a sda33 ' \
+            -e 's block/bootdevice/by-name/modem sda33 ' \
             -e 's block/bootdevice/by-name/modem_b sda43 ' \
             -e 's block/bootdevice/by-name/modemst1 sda61 ' \
             -e 's block/bootdevice/by-name/modemst2 sda62 ' \
             -e 's block/bootdevice/by-name/msadp sda55 ' \
             -e 's block/bootdevice/by-name/oem_a sda40 ' \
+            -e 's block/bootdevice/by-name/oem sda40 ' \
             -e 's block/bootdevice/by-name/oem_b sda50 ' \
             -e 's block/bootdevice/by-name/persist sda5 ' \
             -e 's block/bootdevice/by-name/qupfw_a sda17 ' \
